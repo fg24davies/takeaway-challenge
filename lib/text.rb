@@ -1,7 +1,5 @@
 # require 'rubygems'
 require 'twilio-ruby'
-# require 'dotenv'
-# Dotenv.load
 
 class Text
 
@@ -16,9 +14,8 @@ class Text
     @client.messages.create(
       from: @from,
       to: number,
-      body: "Thank you! Your order was placed and will
+      body: "Thank you! Your order £#{total} was placed and will
       be delivered #{Time.now + 60 * 60}."
     )
   end
-
 end
